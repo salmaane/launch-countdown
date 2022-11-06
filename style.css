@@ -1,0 +1,26 @@
+:root {
+    font-family: 'Red Hat Text', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background:
+            url("images/pattern-hills.svg") no-repeat fixed bottom,
+            hsl(235, 16%, 14%) url("images/bg-stars.svg") fixed;
+    background-size: contain ,contain;
+}
+main {
+    padding-top: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3 {
+    color: white;
+    letter-spacing: 10px;
+}
