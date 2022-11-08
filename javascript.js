@@ -1,19 +1,24 @@
 "use strict";
 
-let date = new Date(2022,10,9,0,0,0);
+let date = new Date(2022,10 ,22);
 
 let day = document.querySelector(".day");
 let hour = document.querySelector(".hour");
 let minute = document.querySelector(".minute");
 let second = document.querySelector(".second");
 
-update();
-let timer = setInterval(update,1000)
-
 function update() {
   let timeLeft = new  Date(date - new Date());
-  day.innerHTML = timeLeft.getDate() < 10 ? '0' + timeLeft.getDate() : timeLeft.getDate() +'';
+
+  if(timeLeft<0) {
+    return;
+  }
+
+  day.innerHTML = timeLeft.getDate()-1 < 10 ? '0' + ( timeLeft.getDate() - 1) : timeLeft.getDate()-1 +'';
   hour.innerHTML = timeLeft.getHours() < 10 ? '0' + timeLeft.getHours() : timeLeft.getHours() +'';
   minute.innerHTML = timeLeft.getMinutes() < 10 ? '0' + timeLeft.getMinutes() : timeLeft.getMinutes() +'';
   second.innerHTML = timeLeft.getSeconds() < 10 ? '0' + timeLeft.getSeconds() : timeLeft.getSeconds() +'';
 }
+
+update();
+let timer = setInterval(update,1000)
