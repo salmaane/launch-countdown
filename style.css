@@ -34,12 +34,14 @@ h3 {
     gap: 3rem;
 }
 .time {
+    width: 155.5px;
     cursor: pointer;
     position: relative;
     background-color: hsl(236, 21%, 26%);
     padding: 1.2rem 1.4rem;
     border-radius: 10px;
     box-shadow: 0 10px hsl(234, 17%, 12%);
+    text-align: center;
 }
 .time::before {
     content: '';
