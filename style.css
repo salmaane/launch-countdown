@@ -27,11 +27,12 @@ h3 {
     letter-spacing: 10px;
 }
 .timer {
+    width: 100%;
     color: hsl(345, 95%, 68%);
-    /*margin-top: 4rem;*/
     font-size: 5rem;
     display: flex;
     gap: 3rem;
+    justify-content: center;
 }
 .time {
     width: 155.5px;
@@ -56,7 +57,7 @@ h3 {
     color: hsl(237, 18%, 59%);
     font-size: 13px;
     bottom: -35px;
-    left: 40px;
+    left: 29.5%;
     letter-spacing: 12px;
 }
 .hour::after {
@@ -65,7 +66,7 @@ h3 {
     color: hsl(237, 18%, 59%);
     font-size: 13px;
     bottom: -35px;
-    left: 37px;
+    left: 29%;
     letter-spacing: 6px;
 }
 .minute::after {
@@ -74,7 +75,7 @@ h3 {
     color: hsl(237, 18%, 59%);
     font-size: 13px;
     bottom: -35px;
-    left: 24px;
+    left: 22%;
     letter-spacing: 5px;
 }
 .second::after {
@@ -83,7 +84,7 @@ h3 {
     color: hsl(237, 18%, 59%);
     font-size: 13px;
     bottom: -35px;
-    left: 23px;
+    left: 23%;
     letter-spacing: 6px;
 }
 span.left {
@@ -107,7 +108,7 @@ span.right {
     top: 46.1%;
 }
 .social {
-    margin-top: 15rem;
+    margin: auto auto 3rem auto;
     display: flex;
     gap: 2rem;
 }
@@ -118,4 +119,40 @@ span.right {
 .social img:hover {
     scale: 110%;
     filter: invert(59%) sepia(23%) saturate(3041%) hue-rotate(306deg) brightness(99%) contrast(90%);
+}
+
+@media screen and (max-width:600px) {
+    body {
+        background-size: 900px, contain;
+    }
+    h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+    main {
+        padding-top: 40%;
+        gap: 4rem;
+    }
+    .timer {
+        gap: 1rem;
+    }
+    .time {
+        border-radius: 4px;
+        width: 72px;
+        font-size: 2rem;
+        padding: 0.8rem 0;
+    }
+    .time::after {
+        font-size: 8px;
+        letter-spacing: 2px;
+        bottom: -28px;
+    }
+    span.left, span.right {
+        width: 6px;
+        height: 6px;
+        top: 45%;
+    }
+    .social {
+        margin-bottom: 2rem;
+    }
 }

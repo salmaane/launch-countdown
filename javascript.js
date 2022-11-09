@@ -2,10 +2,10 @@
 
 let date = new Date(2022,10 ,22);
 
-let day = document.querySelector(".day");
-let hour = document.querySelector(".hour");
-let minute = document.querySelector(".minute");
-let second = document.querySelector(".second");
+let day = document.querySelector(".day p");
+let hour = document.querySelector(".hour p");
+let minute = document.querySelector(".minute p");
+let second = document.querySelector(".second p");
 
 function update() {
   let timeLeft = new  Date(date - new Date());
